@@ -22,7 +22,17 @@
       <section class="panel">
         <form id="prompt-form" class="grid">
           <div class="field full">
-            <label for="prompt">Prompt</label>
+            <label for="system">System prompt</label>
+            <textarea
+              id="system"
+              name="system"
+              rows="3"
+              placeholder="Optional: set behavior, tone, or constraints..."
+            >You are a concise teaching assistant.</textarea>
+          </div>
+
+          <div class="field full">
+            <label for="prompt">User prompt</label>
             <textarea
               id="prompt"
               name="prompt"
@@ -107,10 +117,11 @@
           <h2>Model output</h2>
           <div class="meta" id="meta">Ready</div>
         </div>
-        <pre id="output">Your response will appear here.</pre>
+        <div id="output" class="markdown">Your response will appear here.</div>
       </section>
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

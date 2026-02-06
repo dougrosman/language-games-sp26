@@ -29,6 +29,7 @@ const toInt = (value, fallback) => {
 app.post("/api/generate", async (req, res) => {
   try {
     const {
+      system,
       prompt,
       temperature,
       max_output_tokens,
@@ -41,9 +42,15 @@ app.post("/api/generate", async (req, res) => {
       return res.status(400).json({ error: "Prompt is required." });
     }
 
+    const input = [];
+    if (system && typeof system === "string" && system.trim().length > 0) {
+      input.push({ role: "system", content: system.trim() });
+    }
+    input.push({ role: "user", content: prompt });
+
     const request = {
-      model: "gpt-5-mini",
-      input: prompt,
+      model: "gpt-4.1",
+      input,
       temperature: toNumber(temperature, 0.7),
       max_output_tokens: toInt(max_output_tokens, 256),
       top_p: toNumber(top_p, 1),

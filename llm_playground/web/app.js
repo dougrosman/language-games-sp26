@@ -34,6 +34,7 @@ form.addEventListener("submit", async (event) => {
   submitBtn.disabled = true;
 
   const payload = {
+    system: getValue("system"),
     prompt: getValue("prompt"),
     temperature: Number(getValue("temperature")),
     top_p: Number(getValue("top_p")),
@@ -54,7 +55,8 @@ form.addEventListener("submit", async (event) => {
       throw new Error(data.error || "Request failed");
     }
 
-    output.textContent = data.text || "(no content)";
+    const text = data.text || "(no content)";
+    output.innerHTML = window.marked ? window.marked.parse(text) : text;
     const usage = data.usage
       ? `prompt ${data.usage.input_tokens ?? "?"} • output ${data.usage.output_tokens ?? "?"}`
       : "usage unavailable";

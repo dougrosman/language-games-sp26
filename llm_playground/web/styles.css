@@ -202,14 +202,42 @@ button.ghost {
   color: var(--muted);
 }
 
-pre {
+.markdown {
   margin: 0;
   background: #0b0d12;
   border: 1px solid #1f2430;
   border-radius: 12px;
   padding: 20px;
-  white-space: pre-wrap;
   line-height: 1.6;
+  font-size: 15px;
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3 {
+  margin-top: 1.2em;
+  margin-bottom: 0.6em;
+}
+
+.markdown p {
+  margin: 0.6em 0;
+}
+
+.markdown code {
+  background: rgba(110, 168, 254, 0.12);
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 0.95em;
+}
+
+.markdown pre code {
+  display: block;
+  padding: 14px;
+  overflow-x: auto;
+}
+
+.markdown a {
+  color: var(--accent);
 }
 
 @media (max-width: 760px) {
