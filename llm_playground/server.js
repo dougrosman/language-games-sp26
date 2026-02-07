@@ -52,7 +52,7 @@ app.post("/api/generate", async (req, res) => {
       model: "gpt-4.1",
       input,
       temperature: toNumber(temperature, 0.7),
-      max_output_tokens: toInt(max_output_tokens, 256),
+      max_output_tokens: toInt(max_output_tokens, 1024),
       top_p: toNumber(top_p, 1),
       frequency_penalty: toNumber(frequency_penalty, 0),
       presence_penalty: toNumber(presence_penalty, 0),
