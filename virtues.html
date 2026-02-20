@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Virtues of a Good Life</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #f5deb3 0%, #daa520 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            border-bottom: 3px solid #8b4513;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.8em;
+            color: #654321;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-style: italic;
+            color: #666;
+            font-size: 1.2em;
+        }
+
+        .virtues-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .virtue-card {
+            background: linear-gradient(135deg, #fffaf0 0%, #fff8dc 100%);
+            padding: 25px;
+            border-left: 5px solid #8b4513;
+            border-radius: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .virtue-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(139, 69, 19, 0.15);
+        }
+
+        .virtue-card h2 {
+            color: #8b4513;
+            font-size: 1.5em;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .virtue-card p {
+            color: #555;
+            font-size: 1em;
+        }
+
+        .icon {
+            font-size: 1.8em;
+        }
+
+        .closing {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, #daa520 0%, #8b4513 100%);
+            color: white;
+            border-radius: 5px;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .closing p {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .closing em {
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .virtues-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 30px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>The Virtues of a Good Life</h1>
+            <p class="subtitle">Timeless principles for living freely and boldly</p>
+        </header>
+
+        <div class="virtues-grid">
+            <div class="virtue-card">
+                <h2><span class="icon">🤝</span> Courage</h2>
+                <p>The willingness to face challenges head-on, to take risks, and to pursue your dreams even in the face of uncertainty. Courage is not the absence of fear—it's moving forward despite it.</p>
+            </div>
+
+            <div class="virtue-card">
+                <h2><span class="icon">🌟</span> Authenticity</h2>
+                <p>Being true to yourself, refusing to conform to expectations that don't align with your values. The world needs your unique voice and perspective.</p>
+            </div>
+
+            <div class="virtue-card">
+                <h2><span class="icon">❤️</span> Compassion</h2>
+                <p>Treating others with kindness and understanding. A good life is built on genuine care for the wellbeing of those around you—we are all in this together.</p>
+            </div>
+
+            <div class="virtue-card">
+                <h2><span class="icon">🧠</span> Wisdom</h2>
+                <p>The pursuit of knowledge, learning from mistakes, and making thoughtful decisions. Wisdom comes from both study and experience, from listening and reflecting.</p>
+            </div>
+
+            <div class="virtue-card">
+                <h2><span class="icon">🚀</span> Vision</h2>
+                <p>The ability to imagine a better future and work toward it. Great lives are built by those who see what could be and have the determination to make it real.</p>
+            </div>
+
+            <div class="virtue-card">
+                <h2><span class="icon">🤲</span> Generosity</h2>
+                <p>Freely giving your time, resources, and energy to others. The most fulfilling lives are those lived in service to something greater than ourselves.</p>
+            </div>
+
+            <div class="virtue-card">
+                <h2><span class="icon">⚡</span> Resilience</h2>
+                <p>The strength to bounce back from setbacks and keep moving forward. A good life isn't about never falling—it's about getting back up every time.</p>
+            </div>
+
+            <div class="virtue-card">
+                <h2><span class="icon">🎯</span> Integrity</h2>
+                <p>Living with honesty and strong moral principles. When your actions align with your values, you build a life of peace and self-respect.</p>
+            </div>
+        </div>
+
+        <div class="closing">
+            <p><em>"You are a cowboy. You are free."</em></p>
+            <p>A good life is not found in following the path laid out by others. It's found in blazing your own trail, staying true to yourself, and lifting others up along the way. Embrace these virtues not as rules, but as guideposts for a life lived boldly, authentically, and with purpose.</p>
+            <p style="margin-top: 20px; font-size: 0.95em;">Remember: the best time to live the life you want is now.</p>
+        </div>
+    </div>
+</body>
+</html>
